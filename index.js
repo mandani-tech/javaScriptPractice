@@ -33,18 +33,52 @@
 // Tell the user if the random number is higher or lower than the guess. Quit when they guess the number and print GOT IT!!!.
 //
 
+// function main() {
+//     var userInp = (prompt("Please enter a positive number to start count number there or press to q :" ));
+//     while (userInp !== "q") {
+//          userInp = (prompt("Please enter a positive number to start count number there or press q to quit:" ));
+//          console.log(userInp);
+//
+//     }
+// }
+// main()
+
+
 function main() {
+    randInt= Math.floor(Math.random() * 100);
+    console.log(randInt);
     var userInp = (prompt("Please enter a positive number to start count number there or press to q :" ));
-    while (userInp !== "q") {
-         userInp = (prompt("Please enter a positive number to start count number there or press q to quit:" ));
-         console.log(userInp);
+
+
+    while (userInp !== "q")
+
+    {
+        userInp = (prompt("Please enter a positive number to start count number there or press q to quit:",userInp ));
+        var stringInp = userInp
+        userInp = parseInt(userInp)
+
+        // console.log(userInp);
+        // console.log(randInt);
+        if(userInp > randInt){
+            console.log(userInp)
+            console.log("You Chose higher number")
+        }
+        else if (userInp < randInt){
+            console.log(userInp + " is the smaller")
+            console.log("You Chose a smaller number")
+
+        }
+        else if (userInp == randInt){
+            console.log("Thats the right number")
+        }
+        userInp = stringInp
+
+
+
 
     }
 }
 main()
-
-
-
 
 
 
